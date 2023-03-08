@@ -53,3 +53,74 @@ int main() {
    
     return 0;
 }
+
+
+/// by handlink basic edge test case
+
+
+ 
+#include <bits/stdc++.h>
+using namespace std;
+struct mystack
+{
+    int *arr;
+    int cap;
+    int top;
+    mystack(int c)
+    {
+        cap=c;
+        arr=new int[cap];
+        top=-1;
+    }
+    void push(int x)
+    {
+        if(top==cap-1)
+        {
+            cout<<"stack full"<<endl;
+        }
+        else
+        {
+        top++;
+        arr[top]=x;
+        }
+    }
+    int pop()
+    {
+        if(top==-1)
+        {
+            cout<<"Stack is empty"<<endl;
+        }
+        int res=arr[top];
+        top--;
+        return res;
+    }
+    int peek()
+    {
+        if(top==-1)
+        {
+            cout<<"empty stack"<<endl;
+        }
+        return arr[top];
+    }
+    int size()
+    {
+        return top+1;
+    }
+    bool empty()
+    {
+        return top==-1;
+    }
+    
+};
+int main() {
+   mystack s(2);
+//   s.push(1);
+//   s.push(3);
+//   s.push(3);
+ s.pop();
+ s.peek();
+  
+   
+    return 0;
+}
+
